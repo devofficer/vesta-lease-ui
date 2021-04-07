@@ -9,7 +9,7 @@
         <v-spacer></v-spacer>
       </v-toolbar>
       <v-divider></v-divider>
-       <div class="pa-4">
+     <div class="pa-4">
             <slot/>
        </div>     
   </v-card>

@@ -1,11 +1,10 @@
 module.exports = {
-    lintOnSave: process.env.NODE_ENV !== "production",
-    transpileDependencies: ["vuetify"],
-    //   devServer: {
-    //     overlay: {
-    //       warnings: true,
-    //       errors: true,
-    //     },
-    //   },
-  };
-  
+  transpileDependencies: ["vuetify"],
+  publicPath: "/",
+  chainWebpack: (config) => {
+    config.plugins.delete("prefetch");
+  },
+  css: {
+    extract: true,
+  },
+};
